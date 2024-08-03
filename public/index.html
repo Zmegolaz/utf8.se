@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        var ಥ‿ಥ = document.getElementsByClassName("copyonclick");
+        for (var i = 0; i < ಥ‿ಥ.length; i++) {
+                ಥ‿ಥ[i].addEventListener('click', function () {
+                        ಠಿ_ಠ(this.textContent);
+                }, false);
+        }
+}, false);
+
+// https://stackoverflow.com/questions/45071353/copy-text-string-on-click/53977796#53977796
+const ಠಿ_ಠ = str => {
+  const ಠ_ಠ = document.createElement('textarea');
+  ಠ_ಠ.value = str;
+  ಠ_ಠ.setAttribute('readonly', '');
+  ಠ_ಠ.style.position = 'absolute';
+  ಠ_ಠ.style.left = '-9999px';
+  document.body.appendChild(ಠ_ಠ);
+  const selected =
+    document.getSelection().rangeCount > 0
+      ? document.getSelection().getRangeAt(0)
+      : false;
+  ಠ_ಠ.select();
+  document.execCommand('copy');
+  document.body.removeChild(ಠ_ಠ);
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
+};
+</script>
+</head>
+<body>
+Klicka pÃ¥ en grej fÃ¶r att kopiera den.
+<br />
+<br />
+
+<div class="copyonclick">ಠ_ಠ</div>
+<div class="copyonclick">( ͡ᵔ ͜ʖ ͡ᵔ )</div>
+<div class="copyonclick">( ͡° ͜ʖ ͡°)</div>
+<div class="copyonclick">(☞ﾟヮﾟ)☞</div>
+<div class="copyonclick">(╯°□°)╯︵ ┻━┻</div>
+<div class="copyonclick">┻━┻︵ \(°□°)/ ︵ ┻━┻</div>
+
+</body>
+</html>
